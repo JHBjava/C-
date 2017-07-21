@@ -1,3 +1,6 @@
+#ifndef USER_H;
+#define USER_H;
+
 #include <iostream>
 #include <string>
 using namespace std;
@@ -97,7 +100,9 @@ public:
 		return u_type;
 	}
 
-	void print() {
-
+	void print_edit() {
+		cout << "\n\n1. Name: " << this->getName() << "\n2. Gender: " << this->getGender() << "\n3. Age: " << this->getAge() << "\n4. Password: " << this->getPasswd() << "\n5. Telno: " << this->getTelno() << "\n6. Email: " << this->getEmail() << endl;
 	}
 };
+
+#endif
