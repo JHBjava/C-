@@ -1,0 +1,59 @@
+type: (1)customer, (2)admin, (3)staff
+status: (0)deleted, (1)normal
+
+User{
+(PK)u_id,u_name,u_gender,u_age,u_email,u_address,u_password,u_telno,u_status,u_type
+}
+
+Booking{
+(PK)b_id,(FK)b_id,b_time,b_price,b_status
+}
+
+Room{
+(PK)r_id,r_price,r_size,r_status
+}
+
+Booking_Room{
+(PK)br_id,(FK)b_id,(FK)r_id
+}
+
+Payroll{
+(PK)p_id,(FK)u_id,p_salary,p_epf,p_socso,p_commission
+}
+
+Payslip{
+(PK)ps_id,(FK)u_id,ps_salary,ps_epf,ps_socso,ps_date,ps_commission
+}
+
+<<2nd normal form>>
+
+type: (1)customer, (2)admin, (3)staff
+status: (0)deleted, (1)normal
+
+User{
+(PK)u_id,u_name,u_gender,u_age,u_email,l_id,u_password,u_telno,u_status,u_type
+}
+
+Location{
+(PK)l_id,street,state,country,postcode
+}
+
+Booking{
+(PK)b_id,(FK)b_id,b_time,b_price,b_status
+}
+
+Room{
+(PK)r_id,r_price,r_size,r_status
+}
+
+Booking_Room{
+(PK)br_id,(FK)b_id,(FK)r_id
+}
+
+Payroll{
+(PK)p_id,(FK)u_id,p_salary,p_epf,p_socso,p_commission
+}
+
+Payslip{
+(PK)ps_id,(FK)u_id,ps_salary,ps_epf,ps_socso,ps_date,ps_commission
+}
